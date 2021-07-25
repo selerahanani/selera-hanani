@@ -1,4 +1,7 @@
-import Link from 'next/link'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/prop-types */
+import React from 'react';
+import Link from 'next/link';
 
 export default function Layout({ children }) {
   return (
@@ -23,5 +26,5 @@ export default function Layout({ children }) {
         <p>Copyright 2021 Just Add Marmite :)</p>
       </footer>
     </div>
-  )
+  );
 }
