@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { createClient } from 'contentful';
-import CakeCard from '../components/CakeCard';
+import Card from '../components/Card';
 
 export async function getStaticProps() {
   const client = createClient({
@@ -21,12 +21,12 @@ export async function getStaticProps() {
 
 export default function Recipes({ cakes }) {
   // eslint-disable-next-line no-console
-  console.log(cakes);
+  console.log(cakes[0]);
 
   return (
     <div className="recipe-list">
       {cakes.map((cake) => (
-        <CakeCard key={cake.sys.id} cake={cake} />
+        <Card key={cake.sys.id} cake={cake} />
       ))}
     </div>
   );

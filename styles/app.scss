@@ -3,6 +3,7 @@
 body {
     // background: #f4e640;
     background: #faa932;
+    // background: #fff;
     margin: 0;
     font-family: "Roboto";
     font-size: 1.5em;
@@ -63,4 +64,6 @@ footer {
     grid-gap: 20px 60px;
 }
 
-@import "./skeleton";
+// @import "./skeleton";
+@import "./card";
+@import "./detail-page";

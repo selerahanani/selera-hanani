@@ -13,7 +13,7 @@ export default function Layout({ children }) {
               <span> </span>
               <span>Selera Hanani</span>
             </h1>
-            <h2>Spread The Joy</h2>
+            <h2> </h2>
             {/* <h1>
               <span>Selera</span>
               <span>Hanani</span>
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
       </div>
 
       <footer>
-        <p>Copyright 2021 Just Add Marmite :)</p>
+        <p>Copyright 2021 Selera Hanani</p>
       </footer>
     </div>
   );
