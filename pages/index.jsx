@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { createClient } from 'contentful';
-import RecipeCard from '../components/RecipeCard';
+import CakeCard from '../components/CakeCard';
 
 export async function getStaticProps() {
   const client = createClient({
@@ -9,32 +9,25 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: 'recipe' });
+  const res = await client.getEntries({ content_type: 'cakes' });
 
   return {
     props: {
-      recipes: res.items,
+      cakes: res.items,
     },
     revalidate: 1,
   };
 }
 
-export default function Recipes({ recipes }) {
+export default function Recipes({ cakes }) {
+  // eslint-disable-next-line no-console
+  console.log(cakes);
+
   return (
     <div className="recipe-list">
-      {recipes.map((recipe) => (
-        <RecipeCard key={recipe.sys.id} recipe={recipe} />
+      {cakes.map((cake) => (
+        <CakeCard key={cake.sys.id} cake={cake} />
       ))}
-
-      <style jsx>
-        {`
-        .recipe-list {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 20px 60px;
-        }
-      `}
-      </style>
     </div>
   );
 }

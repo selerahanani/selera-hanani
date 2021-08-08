@@ -10,10 +10,14 @@ export default function Layout({ children }) {
         <Link href="/">
           <a>
             <h1>
-              <span>Just Add</span>
-              <span>Marmite</span>
+              <span> </span>
+              <span>Selera Hanani</span>
             </h1>
             <h2>Spread The Joy</h2>
+            {/* <h1>
+              <span>Selera</span>
+              <span>Hanani</span>
+            </h1> */}
           </a>
         </Link>
       </header>
