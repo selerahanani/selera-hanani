@@ -47,9 +47,17 @@ header {
 footer {
     background: #111;
     color: #bbb;
-    padding: 40px;
+    padding: 40px 10rem;
     text-align: center;
     margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    .spreadsheet {
+        display: flex;
+        flex-direction: column;
+        // background: yellow;
+    }
+    // .copyright{}
 }
 .page-content {
     max-width: 1200px;

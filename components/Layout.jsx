@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Link from 'next/link';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (
@@ -26,9 +27,7 @@ export default function Layout({ children }) {
         { children }
       </div>
 
-      <footer>
-        <p>Copyright 2021 Selera Hanani</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

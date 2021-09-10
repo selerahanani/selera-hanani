@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
 export default function Recipes({ cakes }) {
   // eslint-disable-next-line no-console
-  console.log(cakes[0]);
+//   console.log(cakes[0]);
 
   return (
     <div className="recipe-list">

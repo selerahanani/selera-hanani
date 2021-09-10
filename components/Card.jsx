@@ -27,8 +27,8 @@ export default function CakeCard({ cake }) {
         <div className="actions">
           <div className="category">
             {categories.map((ing) => (
-              <Link href="/">
-                <a key={ing}>{ ing }</a>
+              <Link key={ing} href="/">
+                <a>{ ing }</a>
               </Link>
             ))}
           </div>
