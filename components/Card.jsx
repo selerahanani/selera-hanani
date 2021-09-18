@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+// import { Card, CardActions, CardContent, CardMedia, Button, Typography} from '@mui/material';
 
 export default function CakeCard({ cake }) {
   const {
