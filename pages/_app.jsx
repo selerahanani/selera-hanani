@@ -1,6 +1,5 @@
-/* eslint-disable no-console */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-props-no-spreading */
+import "../node_modules/slick-carousel/slick/slick.css"; 
+import "../node_modules/slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from 'react';
 import '../styles/app.scss';
 import Head from 'next/head';

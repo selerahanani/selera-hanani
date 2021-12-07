@@ -1,33 +1,39 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import Link from 'next/link';
 import Footer from './Footer';
+import {AppBar, Toolbar, Typography} from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { Menu, ShoppingCart } from '@mui/icons-material';
+
+
+const useStyles = makeStyles(
+     {
+        appBar: {
+            display: 'flex',
+            justifyContent: 'space-between',
+            backgroundColor: '#fff',
+        },
+        menu: {
+            color: '#000',
+        }
+    }
+)
 
 export default function Layout({ children }) {
+    const classes = useStyles();
   return (
-    <div className="layout">
-      <header>
-        <Link href="/">
-          <a>
-            <h1>
-              <span> </span>
-              <span>Selera Hanani</span>
-            </h1>
-            <h2> </h2>
-            {/* <h1>
-              <span>Selera</span>
-              <span>Hanani</span>
-            </h1> */}
-          </a>
-        </Link>
-      </header>
-
-      <div className="page-content">
+    <>
+    <AppBar 
+       >
+        <Toolbar className={classes.appBar} >
+            <Menu className={classes.menu} />
+            <ShoppingCart  className={classes.menu} />
+        </Toolbar >
+        </AppBar>
+      <div className={classes.toolbar}>
         { children }
       </div>
-
-      <Footer />
-    </div>
+      {/* <Footer /> */}
+    </>
   );
 }
