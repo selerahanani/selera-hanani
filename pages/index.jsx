@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { createClient } from 'contentful';
+import Carousel from '../components/Carousel';
 import Card from '../components/Card';
 
 export async function getStaticProps() {
@@ -20,14 +21,12 @@ export async function getStaticProps() {
 }
 
 export default function Recipes({ cakes }) {
-  // eslint-disable-next-line no-console
-  console.log(cakes[0]);
-
   return (
     <div className="recipe-list">
-      {cakes.map((cake) => (
+      {/* {cakes.map((cake) => (
         <Card key={cake.sys.id} cake={cake} />
-      ))}
+      ))} */}
+      <Carousel />
     </div>
   );
 }

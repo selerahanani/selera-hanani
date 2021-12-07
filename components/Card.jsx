@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+// import { Card, CardActions, CardContent, CardMedia, Button, Typography} from '@mui/material';
 
 export default function CakeCard({ cake }) {
   const {
@@ -27,8 +28,8 @@ export default function CakeCard({ cake }) {
         <div className="actions">
           <div className="category">
             {categories.map((ing) => (
-              <Link href="/">
-                <a key={ing}>{ ing }</a>
+              <Link key={ing} href="/">
+                <a>{ ing }</a>
               </Link>
             ))}
           </div>
